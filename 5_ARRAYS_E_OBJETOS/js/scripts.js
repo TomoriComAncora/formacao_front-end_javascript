@@ -100,50 +100,121 @@
 // console.log(a);
 // console.log(b);
 
-// 10 loops em array
-const users = ["Lucsa", "Pedro", "Vinicius", "Goran"];
+// // 10 loops em array
+// const users = ["Lucsa", "Pedro", "Vinicius", "Goran"];
 
-for (let i = 0; i < users.length; i++) {
-  console.log(`Listando o usuário ${users[i]}`);
-}
+// for (let i = 0; i < users.length; i++) {
+//   console.log(`Listando o usuário ${users[i]}`);
+// }
 
-// 11 push e pop
-const array = ["a", "b", "c"];
+// // 11 push e pop
+// const array = ["a", "b", "c"];
 
-array.push("d");
-console.log(array);
-console.log(array.length);
+// array.push("d");
+// console.log(array);
+// console.log(array.length);
 
-array.pop();
-console.log(array);
+// array.pop();
+// console.log(array);
 
-const itemRemovido = array.pop();
-console.log(itemRemovido);
-console.log(array);
+// const itemRemovido = array.pop();
+// console.log(itemRemovido);
+// console.log(array);
 
-array.push("c", "d", "e", "f");
-console.log(array);
+// array.push("c", "d", "e", "f");
+// console.log(array);
 
-// 12 shift e unshift
-const letras = ["a", "b", "d"];
-console.log(letras);
+// // 12 shift e unshift
+// const letras = ["a", "b", "d"];
+// console.log(letras);
 
-const letra = letras.shift();
-console.log(`A letra removida foi ${letra}`);
-console.log(letras);
+// const letra = letras.shift();
+// console.log(`A letra removida foi ${letra}`);
+// console.log(letras);
 
-letras.unshift("p", "q", "r");
-console.log(letras);
+// letras.unshift("p", "q", "r");
+// console.log(letras);
 
-letras.unshift("s");
-console.log(letras);
+// letras.unshift("s");
+// console.log(letras);
 
-// 13 indexOf e lastIndexOf
-const frutas = ["Morango", "Maçã", "Laranja", "Limão", "Maçã"];
+// // 13 indexOf e lastIndexOf
+// const frutas = ["Morango", "Maçã", "Laranja", "Limão", "Maçã"];
 
-console.log(frutas.indexOf("Laranja"));
-console.log(frutas.lastIndexOf("Maçã"));
-console.log(frutas.indexOf("Maçã"));
+// console.log(frutas.indexOf("Laranja"));
+// console.log(frutas.lastIndexOf("Maçã"));
+// console.log(frutas.indexOf("Maçã"));
 
-console.log(frutas[2]);
-console.log(frutas[frutas.indexOf("Laranja")]);
+// console.log(frutas[2]);
+// console.log(frutas[frutas.indexOf("Laranja")]);
+
+// // 14 slice
+// const testeSlice = ["a", "b", "c", "d", "e", "f"];
+
+// const subArray = testeSlice.slice(2, 4);
+// console.log(subArray);
+// console.log(testeSlice);
+
+// const subArray2 = testeSlice.slice(2, 4 + 1);
+// console.log(subArray2);
+
+// const subSubarray = subArray2.slice(0, 2);
+// console.log(subSubarray);
+
+// const subArray3 = testeSlice.slice(10, 20);
+// console.log(subArray3);
+
+// const subArray4 = testeSlice.slice(1);
+// console.log(subArray4);
+
+// // 15 foreach
+// const nums = [1, 2, 3, 4, 5, 6];
+// nums.forEach((numero) => {
+//   console.log(`O número é ${numero}`);
+// });
+
+// const posts = [
+//   { titulo: "Primeiro post", categoria: "PHP" },
+//   { titulo: "Segundo post", categoria: "JavaScript" },
+//   { titulo: "Terceiro post", categoria: "Python" },
+// ];
+
+// posts.forEach((post) => {
+//   console.log(`${post.titulo}, da categoria ${post.categoria}`);
+// });
+
+// // 16 includes
+// const marcas = ["BMW", "VW", "Audi"];
+
+// console.log(marcas.includes("VW"));
+// console.log(marcas.includes("Fiat"));
+
+// if (marcas.includes("VW")) {
+//   console.log("Há carros da marca VW");
+// }
+
+// // 17 reverse
+// const reverseTeste = [5, 4, 3, 2, 1];
+
+// console.log(reverseTeste);
+// reverseTeste.reverse();
+// console.log(reverseTeste);
+
+// 18 strings:trim
+const testeTrim = "  testando   mais uma\n  ";
+
+console.log(testeTrim);
+console.log(testeTrim.trim());
+
+console.log(testeTrim.length);
+console.log(testeTrim.trim().length);
+
+// 19 string:padStart
+const testePadStart = "1";
+
+const newNumber = testePadStart.padStart(4, "0");
+console.log(testePadStart);
+console.log(newNumber);
+
+const lastEnd = testePadStart.padEnd(10, "0");
+console.log(lastEnd);
