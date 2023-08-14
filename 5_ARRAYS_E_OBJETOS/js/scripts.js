@@ -200,67 +200,114 @@
 // reverseTeste.reverse();
 // console.log(reverseTeste);
 
-// 18 strings:trim
-const testeTrim = "  testando   mais uma\n  ";
+// // 18 strings:trim
+// const testeTrim = "  testando   mais uma\n  ";
 
-console.log(testeTrim);
-console.log(testeTrim.trim());
+// console.log(testeTrim);
+// console.log(testeTrim.trim());
 
-console.log(testeTrim.length);
-console.log(testeTrim.trim().length);
+// console.log(testeTrim.length);
+// console.log(testeTrim.trim().length);
 
-// 19 string:padStart
-const testePadStart = "1";
+// // 19 string:padStart
+// const testePadStart = "1";
 
-const newNumber = testePadStart.padStart(4, "0");
-console.log(testePadStart);
-console.log(newNumber);
+// const newNumber = testePadStart.padStart(4, "0");
+// console.log(testePadStart);
+// console.log(newNumber);
 
-const lastEnd = testePadStart.padEnd(10, "0");
-console.log(lastEnd);
+// const lastEnd = testePadStart.padEnd(10, "0");
+// console.log(lastEnd);
 
-// 20 string: split
-const frase = "O rato roeu a roupa do rei de Roma";
+// // 20 string: split
+// const frase = "O rato roeu a roupa do rei de Roma";
 
-const arrayFrase = frase.split(" ");
-console.log(arrayFrase);
+// const arrayFrase = frase.split(" ");
+// console.log(arrayFrase);
 
-// 21 string: join
-const fraseDeNovo = arrayFrase.join(" ");
-console.log(fraseDeNovo);
+// // 21 string: join
+// const fraseDeNovo = arrayFrase.join(" ");
+// console.log(fraseDeNovo);
 
-const itensParaComprar = ["Mouse", "Monitor", "Teclado"];
-const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}`;
-console.log(fraseDeCompra);
+// const itensParaComprar = ["Mouse", "Monitor", "Teclado"];
+// const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}`;
+// console.log(fraseDeCompra);
 
-// 22 string: repeat
-const palavra = "Testando ";
+// // 22 string: repeat
+// const palavra = "Testando ";
 
-const palavraRepetida = palavra.repeat(5);
-console.log(palavraRepetida);
+// const palavraRepetida = palavra.repeat(5);
+// console.log(palavraRepetida);
 
-// 23 Rest Operator
-const somaInfinita = (...args) => {
-  let total = 0;
-  for (let i = 0; i < args.length; i++) {
-    total += args[i];
-  }
-  return total;
+// // 23 Rest Operator
+// const somaInfinita = (...args) => {
+//   let total = 0;
+//   for (let i = 0; i < args.length; i++) {
+//     total += args[i];
+//   }
+//   return total;
+// };
+
+// console.log(somaInfinita(1, 2, 3));
+// console.log(somaInfinita(142, 5, 26));
+
+// // 24 for of
+// const diferencaInfinita = (...args) => {
+//   let total = 0;
+
+//   for (num of args) {
+//     total -= num;
+//   }
+
+//   return total;
+// };
+
+// console.log(diferencaInfinita(1, 2, 3));
+// console.log(diferencaInfinita(1, 2, 3, 453, 463, 23, 66));
+
+// 25 destructuring em objetos
+const userDetails = {
+  firstName: "Lucas",
+  lastName: "Fernando",
+  job: "T.I",
 };
 
-console.log(somaInfinita(1, 2, 3));
-console.log(somaInfinita(142, 5, 26));
+const { firstName, lastName, job } = userDetails;
 
-// 24 for of
-const diferencaInfinita = (...args) => {
-  let total = 0;
+console.log(
+  `O ${firstName} ${lastName} trabalha no setor de ${job} da Santa Casa`
+);
 
-  for (num of args) {
-    total -= num;
-  }
+// Renomear variaveis
+const {
+  firstName: primeiroNome,
+  lastName: segundoNome,
+  job: trabalho,
+} = userDetails;
+console.log(primeiroNome, segundoNome, trabalho);
 
-  return total;
-};
+// 26 destructuring em arrays
+const meusVeiculos = ["Carro", "moto", "bicicleta"];
 
-console.log(diferencaInfinita(1, 2, 3));
-console.log(diferencaInfinita(1, 2, 3, 453, 463, 23, 66));
+const [veiculoA, veiculoB, veiculoC] = meusVeiculos;
+console.log(veiculoA, veiculoB, veiculoC);
+
+// 27 JSON
+const myJson =
+  '{"nome": "Lucas", "idade": "21", "skills": ["html", "css", "javaScript", "python"]}';
+console.log(myJson);
+
+// 28 conventer JSON para objeto e objeto para JSON
+const myObj = JSON.parse(myJson);
+console.log(myObj);
+console.log(myObj.skills);
+
+const { nome: novoNome, idade: novaIdade, skills } = myObj;
+console.log(`${novoNome} tem ${novaIdade} e tem essas skills ${skills}`);
+
+myObj.trabalhando = true;
+
+console.log(myObj);
+
+const myNewJson = JSON.stringify(myObj);
+console.log(myNewJson);
