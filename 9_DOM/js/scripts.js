@@ -45,3 +45,58 @@ const div = produtctQuerry2.parentElement;
 console.log(div);
 
 div.insertBefore(h1, produtctQuerry2);
+
+// 7 appendchild
+const navLinks = document.querySelector("nav ul");
+
+const li = document.createElement("li");
+
+navLinks.appendChild(li);
+
+const produtos = document.querySelector("#main-container");
+
+const tituloProduct = document.createElement("h2");
+tituloProduct.textContent = "Produto 3";
+
+const descricao = document.createElement("p");
+descricao.textContent = "Descrição";
+
+produtos.appendChild(tituloProduct);
+produtos.appendChild(descricao);
+
+
+// 8 replaceChild
+const h2 = document.createElement("h2");
+h2.textContent = "Novo Título";
+
+const tituloProdutos = document.createElement("h1");
+tituloProdutos.textContent = "Produtos";
+
+div.replaceChild(tituloProdutos,h1);
+header.replaceChild(h2, title);
+
+// 9 createTextNode
+const myText = document.createTextNode("Criando mais um título");
+
+const h3 = document.createElement("h3");
+h3.appendChild(myText);
+
+produtos.appendChild(h3);
+
+// 10 trabalhando com atributos
+const firsLink = navLinks.querySelector("a");
+console.log(firsLink)
+
+console.log(firsLink.getAttribute("href"));
+firsLink.setAttribute("href", "https://www.google.com");
+console.log(firsLink.getAttribute("href"));
+firsLink.setAttribute("target", "blank");
+
+// 11 altura e largura
+const footer = document.querySelector("footer");
+
+console.log(footer.offsetWidth);
+console.log(footer.offsetHeight);
+
+console.log(footer.clientWidth);
+console.log(footer.clientHeight);
