@@ -1,0 +1,14 @@
+nav {
+    border-bottom: 1px solid #DDD;
+    display: flex;
+}
+
+ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+footer{
+    border: 1px solid #F00;
+}
