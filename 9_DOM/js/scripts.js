@@ -54,6 +54,7 @@ const li = document.createElement("li");
 navLinks.appendChild(li);
 
 const produtos = document.querySelector("#main-container");
+const product = document.querySelector(".product");
 
 const tituloProduct = document.createElement("h2");
 tituloProduct.textContent = "Produto 3";
@@ -100,3 +101,17 @@ console.log(footer.offsetHeight);
 
 console.log(footer.clientWidth);
 console.log(footer.clientHeight);
+
+// 12 posionamento do elemento
+const products1 = produtctQuerry[0];
+console.log(products1.getBoundingClientRect());
+
+// 13 js com css
+produtos.style.color = "red";
+produtos.style.backgroundColor = "#DDD";
+produtos.style.padding = "10px 20px";
+
+// 14 estilizando vários componentes
+for(const li of listItens){
+    li.style.backgroundColor = "#F00";
+}
