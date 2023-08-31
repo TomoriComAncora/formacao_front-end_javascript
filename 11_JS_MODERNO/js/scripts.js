@@ -135,16 +135,62 @@ const produtoDetalhado = {
   color: "preto",
 };
 
-const {name: nomeProduto, price, category, color} = produtoDetalhado;
+const { name: nomeProduto, price, category, color } = produtoDetalhado;
 
-console.log(`O nome do produto é ${nomeProduto}, preço ${price}, categoria ${category} e cor${color}`);
+console.log(
+  `O nome do produto é ${nomeProduto}, preço ${price}, categoria ${category} e cor${color}`
+);
 
 // 7 spread operator
-const a1 = [1,2,3];
+const a1 = [1, 2, 3];
 const a2 = [4, 5, 6];
 
 const a3 = [...a1, ...a2];
 console.log(a3);
 
 const a4 = [0, ...a3, 7];
-console.log(a4)
+console.log(a4);
+
+const carName = { name: "Golf" };
+const carBrand = { brand: "VW" };
+const otherInfos = { km: 120000, price: 93000 };
+
+const car = { ...carName, ...carBrand, ...otherInfos };
+console.log(car);
+
+// 8 classes
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  productDiscount(discont) {
+    return this.price * ((100 - discont) / 100);
+  }
+}
+
+const camisa = new Product("camisa", 30.9);
+console.log(camisa);
+console.log(camisa.productDiscount(20));
+console.log(camisa.productDiscount(30));
+
+// 9 herança
+
+class NovosProducts extends Product {
+  constructor(name, price, colors) {
+    super(name, price);
+    this.colors = colors;
+  }
+
+  showColors() {
+    console.log("As cores são:");
+    this.colors.forEach((color) => {
+      console.log(`${color}`);
+    });
+  }
+}
+
+const blusa = new NovosProducts("Blusa nike", 120, ["branca", "preta", "cinza"]);
+console.log(blusa);
+blusa.showColors();
