@@ -4,8 +4,8 @@ console.log(axios);
 // 2 primeiro request
 const getData = async () => {
   try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users",
+    const response = await postFetch.get(
+      "/users",
       //   4 hearder
       {
         headers: {
@@ -61,7 +61,7 @@ const inputBody = document.querySelector("#body");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  axios.post("https://jsonplaceholder.typicode.com/posts", {
+  postFetch.post("/posts", {
     title: inputTitle.value,
     body: inputBody.value,
     userId: 1,
